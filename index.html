@@ -98,39 +98,26 @@ button:hover {
         <div class="error" id="error-msg"></div>
     </div>
 
-   <div id="valentinePage" class="hidden">
-        <h1>❤️ Happy Valentine’s Day ❤️</h1>
-        <h2>Will you be my Valentine?</h2>
-        <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
-        <button id="noBtn" onmouseover="moveNoButton()">No 🙈</button>
-        <div class="success-message" id="successMsg"></div>
-    </div>
 
 </div>
 
 <script>
 function login() {
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMsg = document.getElementById("error-msg");
 
-    // Demo credentials
-    if (user === "admin" && pass === "love123") {
-        document.getElementById("loginPage").classList.add("hidden");
-        document.getElementById("valentinePage").classList.remove("hidden");
+    // Demo Credentials (Change later)
+    const validUser = "Rahul";
+    const validPass = "christyma";
+
+    if (username === validUser && password === validPass) {
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("dashboard-section").style.display = "block";
+        errorMsg.innerText = "";
     } else {
-        document.getElementById("error").innerText = "Invalid login details!";
+        errorMsg.innerText = "marathuta la. Try again.";
     }
-}
-
-function sayYes() {
-    document.getElementById("successMsg").innerHTML = "Yayyyy! 💕 You just made my day! 💕";
-}
-
-function moveNoButton() {
-    const button = document.getElementById("noBtn");
-    const x = Math.floor(Math.random() * 200) - 100;
-    const y = Math.floor(Math.random() * 200) - 100;
-    button.style.transform = `translate(${x}px, ${y}px)`;
 }
     
 </script>
