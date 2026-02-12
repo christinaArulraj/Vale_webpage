@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>More Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#ff758c,#ff7eb3);
+    text-align:center;
+    color:white;
+}
+
+.carousel-container {
+    position:relative;
+    max-width:500px;
+    margin:40px auto;
+}
+
+.carousel-container img {
+    width:100%;
+    border-radius:15px;
+}
+
+.description {
+    margin-top:10px;
+    font-size:18px;
+}
+
+.arrow {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:30px;
+    cursor:pointer;
+    background:white;
+    color:#ff4d6d;
+    padding:5px 15px;
+    border-radius:50%;
+}
+
+.left { left:-50px; }
+.right { right:-50px; }
+
+.bottom-box {
+    margin-top:40px;
+    background:white;
+    color:#ff4d6d;
+    padding:20px;
+    border-radius:15px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.bottom-box button {
+    margin:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.yes { background:#ff4d6d; color:white; }
+.no { background:#ccc; }
+</style>
+</head>
+
+<body>
+
+<h1>Our Love Story ❤️</h1>
+
+<div class="carousel-container">
+    <span class="arrow left" onclick="prevSlide()">❮</span>
+    <img id="carouselImage" src="https://picsum.photos/500/400?1">
+    <span class="arrow right" onclick="nextSlide()">❯</span>
+
+    <div class="description" id="description">
+        This is where our beautiful journey started ❤️
+    </div>
+</div>
+
+<div class="bottom-box">
+    <p><strong>Will you show me how much you love me in person?</strong></p>
+    <button class="yes" onclick="sayYes()">Yes ❤️</button>
+    <button class="no" onclick="window.location.href='final.html'">No 🙈</button>
+</div>
+
+<script>
+let images = [
+    {src:"https://picsum.photos/500/400?1", text:"Our first memory ❤️"},
+    {src:"https://picsum.photos/500/400?2", text:"Laughing together 😄"},
+    {src:"https://picsum.photos/500/400?3", text:"Adventures we cherish ✨"},
+    {src:"https://picsum.photos/500/400?4", text:"Moments of joy 💕"},
+    {src:"https://picsum.photos/500/400?5", text:"Smiles that melt my heart 😍"},
+    {src:"https://picsum.photos/500/400?6", text:"Unforgettable days 🌸"},
+    {src:"https://picsum.photos/500/400?7", text:"You and me forever ❤️"},
+    {src:"https://picsum.photos/500/400?8", text:"My favorite person 💖"},
+    {src:"https://picsum.photos/500/400?9", text:"Every memory is special 💫"},
+    {src:"https://picsum.photos/500/400?10", text:"Our love story continues... 💞"}
+];
+
+let index = 0;
+
+function updateSlide() {
+    document.getElementById("carouselImage").src = images[index].src;
+    document.getElementById("description").innerText = images[index].text;
+}
+
+function nextSlide() {
+    index = (index + 1) % images.length;
+    updateSlide();
+}
+
+function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+}
+
+function sayYes() {
+    alert("I knew you would say yes ❤️");
+}
+</script>
+
+</body>
+</html>
