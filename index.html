@@ -112,9 +112,8 @@ function login() {
     const validPass = "christyma";
 
     if (username === validUser && password === validPass) {
-        document.getElementById("login-section").style.display = "none";
-        document.getElementById("dashboard-section").style.display = "block";
-        errorMsg.innerText = "";
+        window.location.href = "valentine.html";
+    
     } else {
         errorMsg.innerText = "marathuta la. Try again.";
     }
