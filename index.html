@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Codework Portal</title>
+<title>Enter your login credential</title>
 
 <style>
 * {
@@ -92,7 +92,7 @@ button:hover {
     <!-- Login Form -->
     <div id="login-section">
         <h2>Codework Login</h2>
-        <input type="text" id="username" placeholder="Username">
+        <input type="text" id="username" placeholder="how do I call you">
         <input type="password" id="password" placeholder="Password">
         <button onclick="login()">Login</button>
         <div class="error" id="error-msg"></div>
@@ -114,8 +114,10 @@ function login() {
     const errorMsg = document.getElementById("error-msg");
 
     // Demo Credentials (Change later)
-    const validUser = "admin";
-    const validPass = "codework123";
+    const validUser = "Rahul";
+    const validPass = "baby";
+    const validUser = "mommy";
+    const validPass = "aenapetharayea";
 
     if (username === validUser && password === validPass) {
         document.getElementById("login-section").style.display = "none";
