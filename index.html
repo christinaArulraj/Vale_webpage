@@ -108,13 +108,14 @@ function login() {
     const errorMsg = document.getElementById("error-msg");
 
     // Demo Credentials (Change later)
-    const validUser = "Rahul";
+    const validUser = "rahul";
     const validPass = "christyma";
 
     if (username === validUser && password === validPass) {
         window.location.href = "valentine.html";
     
-    } else {
+    } 
+    else {
         errorMsg.innerText = "marathuta la. Try again.";
     }
 }
