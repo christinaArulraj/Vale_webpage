@@ -112,13 +112,11 @@ function login() {
     const validPass = "christyma";
 
     if (username === validUser && password === validPass) {
-        window.location.href = "/valentine.html";
-    
-    } 
-    else {
-        errorMsg.innerText = "marathuta la. Try again.";
-    }
+    setPage("valentine");
+} else {
+    setErrorMsg("Marathuta la. Try again.");
 }
+
     
 </script>
 
